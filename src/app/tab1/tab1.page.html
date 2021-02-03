@@ -1,13 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Speak
+      Speak {{locale}} with rate {{rate}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+<ion-list>
+  <ion-item lines="full">
+<ion-label>Text to speech</ion-label>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-textarea [(ngModel)]="text2speech" rows="6" cols="20" placeholder="Enter your text here"></ion-textarea>
+  </ion-item>
 
   <ion-button expand="block" (click)="speak()">Speak</ion-button>
+  <ion-button expand="block" color="secondary" (click)="pasteClip()">Paste ClipBoard ++</ion-button>
+  <ion-button expand="block" color="danger" (click)="clear()">Clear ClipBoard</ion-button>
+  <ion-button expand="block" color="tertiary" (click)="stop()">Stop Speaking</ion-button>
+
+</ion-list>
 
 </ion-content>
