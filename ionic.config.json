@@ -1,0 +1,7 @@
+{
+  "name": "textToSpeechApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
